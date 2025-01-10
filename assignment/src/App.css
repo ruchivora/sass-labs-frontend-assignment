@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  height: 100%; 
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #111827;
+  color: white;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 0.5rem;
+  }
+}
+
