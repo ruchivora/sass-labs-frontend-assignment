@@ -18,6 +18,7 @@ export function Pagination({totalElements, currentPage = 1, onPageChange}) {
           {/* Previous Button */}
           <button 
             aria-label="Go to previous page"
+            data-testid="prev"
             disabled={isFirstPage ? true : false}
             onClick={()=>{onPageChange(currentPage - 1)}}
           > &lt; &nbsp; Prev
@@ -36,6 +37,7 @@ export function Pagination({totalElements, currentPage = 1, onPageChange}) {
             ) : (
               <button
                 key={index}
+                data-testid={`page-${page}`}
                 className={(page === currentPage) ? styles.active : ''}
                 onClick={() => onPageChange(page)}
                 aria-label={`page ${page}`}
@@ -48,6 +50,7 @@ export function Pagination({totalElements, currentPage = 1, onPageChange}) {
           {/* Next Button */}
           <button 
             disabled={isLastPage ? true : false}
+            data-testid="next"
             onClick={()=>{onPageChange(currentPage + 1)}}
             aria-label="Go to next page"
           > Next &nbsp; &gt;

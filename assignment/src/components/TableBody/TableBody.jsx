@@ -5,9 +5,9 @@ export function TableBody({tableData}) {
     <tbody>
       {tableData.map((item, index) => (
         <tr key={item["s.no"]} aria-label={index}>
-          <td >{item["s.no"]}</td>
-          <td>{item["percentage.funded"]}</td>
-          <td>{item["amt.pledged"]}</td>
+          <td className="sNo">{item["s.no"]}</td>
+          <td className="precentageFunded">{item["percentage.funded"]}</td>
+          <td className="amtPledged">{item["amt.pledged"]}</td>
         </tr>
       ))}
     </tbody> 

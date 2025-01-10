@@ -5,7 +5,6 @@ import styles from './Table.module.css';
 
 export function Table({ data, columns }) {
 
-  console.log(columns);
   return (
     <>
       <div className={styles.tableContainer}>
@@ -14,7 +13,6 @@ export function Table({ data, columns }) {
           <TableBody tableData={data}/>
         </table>
       </div>
-
     </>
   )
 }
